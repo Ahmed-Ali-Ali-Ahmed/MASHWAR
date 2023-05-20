@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Result";
+}
+
+@using MASHWAR.Controllers;
+@model response;
+
+<form  >
+    <section>
+        <div class="inner">
+            <div class="image-holder">
+                <img src="~/images/bird.jpg"  style="width: 100%; height: 100%;"/>
+                @*<img src="~/images/form-wizard-1.jpg" alt="">*@
+            </div>
+            <div class="form-content">
+                <div class="form-header">
+                    <h3>MASHWAR</h3>
+                </div>
+                <p>Here you go </p>
+                <div class="form-row">
+                    <div class="">
+                        <label> @Model.content</label>
+                    </div>
+                </div>
+            </div>
+          </div>
+</section>
+ </form>

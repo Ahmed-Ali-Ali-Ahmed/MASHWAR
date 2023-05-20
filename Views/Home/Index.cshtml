@@ -1,0 +1,226 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "MASHWAR";
+}
+
+@using MASHWAR.Models;
+@model UserInfo;
+
+
+<form  id="wizard" asp-controller="Home" asp-action="Result" action="Home/Result" method="post" style="width:48rem;">
+     @*SECTION 1*@ 
+    <h2></h2>
+    <section>
+        <div class="inner">
+            <div class="image-holder">
+             
+                
+                <img src="~/images/time.jpg"style="height: 100%; width: 100%; object-fit: cover;" />
+                @*<img src="~/images/time.jpg" style="height:100%" />*@
+                @*<img src="images/form-wizard-1.jpg" alt="">*@
+            </div>
+            <div class="form-content">
+                <div class="form-header">
+                    <h3> MASHWAR</h3>
+                </div>
+                <p>We Going to Save your time</p>
+                <div class="form-row">
+                    <div class="form-holder">
+                        <input type="text" asp-for="Name" name="Name" placeholder="Name" class="form-control" />
+                    </div>
+                    <div class="form-holder">
+                        <input type="text" placeholder="city"  asp-for="city" name="city" class="form-control">
+                    </div>
+               
+
+                </div>
+                <div class="form-row">
+                   
+                        <div class="form-holder">
+                            <input type="text" asp-for="favirotcolor" name="favirotcolor" placeholder="favirot color" class="form-control">
+                        </div>
+                        
+                        <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                            <div class="checkbox-tick">
+                                <label class="">
+                                    <input type="radio" name="introvert" asp-for="introvert" value="true" checked> introvert<br>
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="">
+                                    <input type="radio" name="introvert" asp-for="introvert" value="false"> extrovert<br>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                  
+                </div>
+                <div class="form-row">
+                    <div class="form-holder">
+                        <input type="number"   asp-for="Age"  name="Age" placeholder="Age" class="form-control">
+                    </div>
+                    <div class="form-holder" style="align-self: flex-end; transform: translateY(4px);">
+                        <div class="checkbox-tick">
+                            <label class="male">
+                                <input type="radio" name="gender"   asp-for="Gender" value="male" checked> Male<br>
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="female">
+                                <input type="radio" name="gender"  asp-for="Gender" value="female"> Female<br>
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                @*<div class="checkbox-circle">
+                    <label>
+                        <input type="checkbox" checked> Nor again is there anyone who loves or pursues or desires to obtaini.
+                        <span class="checkmark"></span>
+                    </label>
+                </div>*@
+            </div>
+        </div>
+    </section>
+
+     @*SECTION 2*@ 
+    <h2></h2>
+    <section>
+        <div class="inner">
+            <div class="image-holder">
+                @*<img src="~/images/perosn1.png" />*@
+                
+                <img src="~/images/f5.jpg" style="height:100%; width:100%" />
+                @*<img src="~/images/bird.jpg" style="height:100%" />*@
+                @*<img src="images/form-wizard-2.jpg" alt="">*@
+            </div>
+            <div class="form-content">
+                <div class="form-header">
+                    <h3>MASHWAR</h3>
+                </div>
+                <p>Please chose the image you like better</p>
+                <div class="checkbox-tick">
+                    <label style="display:inline" >
+                        
+                        <input type="radio" name="gender" asp-for="Personality"  value="calm" checked><img src="~/images/off-white0.png" style=" max-width: 25%; display:inline" />
+                        <span class="checkmark"></span>
+                    </label>
+                    <label  style="display:inline">
+                        
+                        <input type="radio" name="gender" asp-for="Personality" value="energatic"> <img src="~/images/off-white1.png" style=" max-width: 25%; display: inline"/>
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+              
+                @*<div class="form-row">
+            <div class="form-holder w-100">
+                <input type="text" placeholder="Address" class="form-control">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-holder">
+                <input type="text" placeholder="City" class="form-control">
+            </div>
+            <div class="form-holder">
+                <input type="text" placeholder="Zip Code" class="form-control">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="select">
+                <div class="form-holder">
+                    <div class="select-control">Your country</div>
+                    <i class="zmdi zmdi-caret-down"></i>
+                </div>
+                <ul class="dropdown">
+                    <li rel="United States">United States</li>
+                    <li rel="United Kingdom">United Kingdom</li>
+                    <li rel="Viet Nam">Viet Nam</li>
+                </ul>
+            </div>
+            <div class="form-holder"></div>
+        </div>*@
+            </div>
+        </div>
+    </section>
+
+     @*SECTION 3*@ 
+    <h2></h2>
+    <section>
+        <div class="inner">
+            <div class="image-holder">
+                
+                <img src="~/images/end.jpg" style="height:100%; width:100%"  />
+                @*<img src="images/form-wizard-3.jpg" alt="">*@
+            </div>
+            <div class="form-content">
+                <div class="form-header">
+                    <h3>MASHWAR </h3>
+                </div>
+                <p>Send an optional note</p>
+                <div class="form-row">
+                    <div class="form-holder w-100">
+                        <textarea id="" placeholder="say somthing" class="form-control" name="message" asp-for="message" style="height: 99px;"></textarea>
+                    </div>
+                </div>
+                <div class="checkbox-circle mt-24">
+                    @*<label>
+                        <input type="checkbox" checked>  Please accept <a href="#">terms and conditions ?</a>
+                        <span class="checkmark"></span>
+
+                    </label>*@
+
+               
+
+                </div>
+                <div class="row mt-5 ml-5">
+                    <button class="btn  submit mt-5">Submit</button>
+                </div>
+            </div>
+
+        </div>
+        <input name="lat" asp-for="lat"  id="lat" hidden>
+        <input name="longt" asp-for="longt" id="longt" hidden>
+    </section>
+
+
+</form>
+
+<style>
+
+    .sumCont {
+        position: absolute;
+        right: auto;
+        top: 80rem;
+    }
+    .submit {
+        background: #6d7f52;
+        color: #fff;
+        width: 117px;
+        height: 46px;
+        border:none
+    }
+   
+</style>
+@section Scripts{ 
+    <script>
+
+        window.onload = function () {
+            getLocation();
+        };
+        var lat = document.getElementById("lat");
+        var long = document.getElementById("longt");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+               
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById('lat').value = position.coords.latitude;
+            document.getElementById('longt').value = position.coords.longitude;
+           
+        }
+    </script>
+
+}
